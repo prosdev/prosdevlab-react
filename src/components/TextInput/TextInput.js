@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Label from '../Label';
 
 /** Text input with label */
-function TextInput({htmlId, htmlFor, label, required = false, type = "text", name, placeholder, value, onChange, error, children, ...props}) {
+function TextInput({htmlId, label, required = false, type = "text", name, placeholder, value, onChange, error, children, ...props}) {
     return (
         <div style={{marginBottom: 16}}>
-        <Label htmlFor={htmlFor} label={label} />
-            <input
+        <Label htmlFor={htmlId} label={label} />
+        <input
                 id={htmlId}
                 type={type}
                 name={name}
@@ -16,9 +16,8 @@ function TextInput({htmlId, htmlFor, label, required = false, type = "text", nam
                 onChange={onChange}
                 style={error && {border: 'solid 1px red'}}
                 {...props}
-            />
-            {children}
-            {error && <div className="error" style={{color: 'red'}}>{error}</div>}
+         />{children}
+         {error && <div className="error" style={{color: 'red'}}>{error}</div>}
         </div>
     )
 }
