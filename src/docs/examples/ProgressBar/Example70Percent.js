@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from 'prosdevlab-react/ProgressBar/ProgressBar';
+import ProgressBar from 'prosdevlab-react/ProgressBar';
 
 /** 70% progress */
 export default function Example70Percent() {
